@@ -490,21 +490,28 @@ table.sortableTable {
     td {
       padding: 0 15px;
     }
+  }
 
-    td {
-      position: relative;
+  .neverShowSiteIcon {
+    font-size: 20px;
+    text-align: center;
+
+    .fa {
+      visibility: hidden;
     }
 
-    .th-inner {
-      font-weight: bold;
-
-      &:hover {
-        cursor: pointer;
-        text-decoration: underline;
+    &:hover {
+      .fa {
+        visibility: visible;
       }
     }
   }
 
+}
+
+.hideExcludedSites {
+  text-align: right;
+  margin: 10px 75px;
 }
 
 .modal .dialog.paymentHistory .sectionTitle {
@@ -721,6 +728,7 @@ div.nextPaymentSubmission {
   }
 
   .sort {
+    width: 100%;
     text-align: left;
   }
 
